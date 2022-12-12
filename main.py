@@ -35,5 +35,6 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     open_filename = QFileDialog.getOpenFileName(None, "Открыть файл",
                                                 os.curdir, "XML files (*.xml)")[0]
-    parse(open_filename)
+    if open_filename:
+        parse(open_filename)
     app.quit()
