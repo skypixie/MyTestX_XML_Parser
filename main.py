@@ -23,7 +23,6 @@ def parse(filename):
             answers.append(task.find("InputText").find("Value").text)
         result[q_text] = answers
     
-    print(save_filename)
     with open(save_filename, "w") as file:
         for question in result:
             file.write(f"{question}\n")
